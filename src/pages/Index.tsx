@@ -132,12 +132,12 @@ const Index = () => {
                   ¿Agendamos una sesión? 🤝
                 </h1>
                 <div className="flex items-center justify-center gap-5 mb-2">
-                  <div className="w-20 h-20 rounded-xl bg-[hsl(348,80%,50%)] flex items-center justify-center p-3">
-                    <img src={sysdeLogo} alt="Sysde" className="h-12 object-contain brightness-0 invert" />
+                  <div className="w-36 h-24 rounded-xl bg-[#b41d2f] flex items-center justify-center p-4">
+                    <img src={sysdeLogo} alt="Sysde" className="h-16 object-contain brightness-0 invert" />
                   </div>
                   <span className="text-muted-foreground text-3xl font-bold">+</span>
-                  <div className="w-20 h-20 rounded-xl bg-[hsl(348,80%,50%)] flex items-center justify-center p-3">
-                    <img src={clientLogo} alt="Cliente" className="h-12 object-contain brightness-0 invert" />
+                  <div className="w-36 h-24 rounded-xl bg-[#b41d2f] flex items-center justify-center p-4">
+                    <img src={clientLogo} alt="Cliente" className="h-16 object-contain brightness-0 invert" />
                   </div>
                 </div>
 
