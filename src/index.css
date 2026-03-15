@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    /* SYSDE Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    /* SYSDE Red */
+    --primary: 348 74% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light gray */
+    --secondary: 220 15% 96%;
+    --secondary-foreground: 220 20% 15%;
+
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Red accent */
+    --accent: 348 74% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 348 74% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom SYSDE Variables */
+    --sysde-red: 348 74% 45%;
+    --sysde-red-dark: 348 74% 35%;
+    --sysde-red-light: 348 74% 55%;
+    --sysde-gray: 220 20% 25%;
+    --sysde-gray-light: 220 15% 45%;
+    
+    /* Pain Map Colors */
+    --pain-low: 45 90% 50%;
+    --pain-medium: 25 90% 50%;
+    --pain-high: 0 80% 50%;
+    --pain-selected: 348 74% 45%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(348 74% 45%) 0%, hsl(348 74% 35%) 50%, hsl(220 20% 20%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 15% 98%) 100%);
+    --gradient-pain: linear-gradient(135deg, hsl(348 74% 50% / 0.1) 0%, hsl(348 74% 45% / 0.2) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px hsl(220 20% 15% / 0.06);
+    --shadow-md: 0 4px 16px hsl(220 20% 15% / 0.1);
+    --shadow-lg: 0 8px 32px hsl(220 20% 15% / 0.15);
+    --shadow-glow: 0 0 40px hsl(348 74% 45% / 0.3);
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 348 74% 45%;
+  }
+
+  .dark {
+    --background: 220 20% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 348 74% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 348 74% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 348 74% 50%;
+    
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 348 74% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 348 74% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  .pain-spot {
+    @apply relative cursor-pointer transition-all duration-300 ease-out;
+    @apply hover:scale-110 hover:z-10;
+  }
+  
+  .pain-spot::before {
+    content: '';
+    @apply absolute inset-0 rounded-full opacity-0 transition-opacity duration-300;
+    background: radial-gradient(circle, hsl(var(--primary) / 0.4) 0%, transparent 70%);
+  }
+  
+  .pain-spot:hover::before {
+    @apply opacity-100;
+    animation: pulse-glow 1.5s ease-in-out infinite;
+  }
+  
+  .pain-spot.selected {
+    @apply scale-110 z-10;
+  }
+  
+  .pain-spot.selected::after {
+    content: '';
+    @apply absolute inset-0 rounded-full;
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.6), 0 0 40px hsl(var(--primary) / 0.3);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--sysde-red-dark)) 100%);
+  }
+  
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse-slow 2s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
