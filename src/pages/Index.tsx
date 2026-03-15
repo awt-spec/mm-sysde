@@ -9,6 +9,7 @@ import { format } from "date-fns";
 import { es } from "date-fns/locale";
 import { cn } from "@/lib/utils";
 import sysdeLogo from "@/assets/logo_sysde.png";
+import clientLogo from "@/assets/logo_client.png";
 
 const TIME_SLOTS = [
   "08:00", "09:00", "10:00", "11:00",
