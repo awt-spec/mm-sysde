@@ -86,7 +86,7 @@ const Index = () => {
 
     try {
       const { error } = await supabase.functions.invoke("send-diagnostic", {
-        body: { company: "Senado", product: "Filemaster", availability },
+        body: { company: "Cliente", product: "Filemaster", availability },
       });
       if (error) throw error;
       setStep("thanks");
