@@ -131,13 +131,13 @@ const Index = () => {
                 <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-2 text-center">
                   ¿Agendamos una sesión? 🤝
                 </h1>
-                <div className="flex items-center justify-center gap-4 mb-2">
-                  <div className="w-14 h-14 rounded-lg bg-[hsl(348,80%,50%)] flex items-center justify-center p-2">
-                    <img src={sysdeLogo} alt="Sysde" className="h-8 object-contain brightness-0 invert" />
+                <div className="flex items-center justify-center gap-5 mb-2">
+                  <div className="w-20 h-20 rounded-xl bg-[hsl(348,80%,50%)] flex items-center justify-center p-3">
+                    <img src={sysdeLogo} alt="Sysde" className="h-12 object-contain brightness-0 invert" />
                   </div>
-                  <span className="text-muted-foreground text-2xl font-bold">+</span>
-                  <div className="w-14 h-14 rounded-lg bg-card border border-border flex items-center justify-center p-2">
-                    <img src={clientLogo} alt="Cliente" className="h-8 object-contain" />
+                  <span className="text-muted-foreground text-3xl font-bold">+</span>
+                  <div className="w-20 h-20 rounded-xl bg-[hsl(348,80%,50%)] flex items-center justify-center p-3">
+                    <img src={clientLogo} alt="Cliente" className="h-12 object-contain brightness-0 invert" />
                   </div>
                 </div>
 
