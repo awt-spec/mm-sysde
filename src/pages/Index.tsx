@@ -9,6 +9,7 @@ import { format } from "date-fns";
 import { es } from "date-fns/locale";
 import { cn } from "@/lib/utils";
 import sysdeLogo from "@/assets/logo_sysde.png";
+import clientLogo from "@/assets/logo_client.png";
 
 const TIME_SLOTS = [
   "08:00", "09:00", "10:00", "11:00",
@@ -85,7 +86,7 @@ const Index = () => {
 
     try {
       const { error } = await supabase.functions.invoke("send-diagnostic", {
-        body: { company: "Senado", product: "Filemaster", availability },
+        body: { company: "Cliente", product: "Filemaster", availability },
       });
       if (error) throw error;
       setStep("thanks");
@@ -130,10 +131,14 @@ const Index = () => {
                 <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-2 text-center">
                   ¿Agendamos una sesión? 🤝
                 </h1>
-                <div className="flex items-center justify-center gap-3 mb-2">
-                  <span className="text-lg font-bold text-primary">Sysde</span>
-                  <span className="text-muted-foreground text-xl font-bold">+</span>
-                  <span className="text-lg font-bold text-foreground">Senado</span>
+                <div className="flex items-center justify-center gap-4 mb-2">
+                  <div className="w-14 h-14 rounded-lg bg-[hsl(348,80%,50%)] flex items-center justify-center p-2">
+                    <img src={sysdeLogo} alt="Sysde" className="h-8 object-contain brightness-0 invert" />
+                  </div>
+                  <span className="text-muted-foreground text-2xl font-bold">+</span>
+                  <div className="w-14 h-14 rounded-lg bg-card border border-border flex items-center justify-center p-2">
+                    <img src={clientLogo} alt="Cliente" className="h-8 object-contain" />
+                  </div>
                 </div>
 
 
@@ -370,7 +375,7 @@ const Index = () => {
                 </motion.div>
 
                 <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
-                  ¡Listo, Senado! 🎉
+                  ¡Listo! 🎉
                 </h2>
                 <p className="text-muted-foreground text-base md:text-lg max-w-lg mb-2 leading-relaxed">
                   Recibimos tu disponibilidad. Te confirmaremos la fecha y hora de la sesión muy pronto.
