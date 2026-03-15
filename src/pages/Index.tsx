@@ -375,7 +375,7 @@ const Index = () => {
                 </motion.div>
 
                 <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
-                  ¡Listo, Senado! 🎉
+                  ¡Listo! 🎉
                 </h2>
                 <p className="text-muted-foreground text-base md:text-lg max-w-lg mb-2 leading-relaxed">
                   Recibimos tu disponibilidad. Te confirmaremos la fecha y hora de la sesión muy pronto.
