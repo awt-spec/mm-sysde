@@ -198,6 +198,14 @@ const Index = () => {
                     Selecciona al menos 2 fechas en el calendario
                   </p>
                 )}
+
+                <Button
+                  variant="ghost"
+                  onClick={() => setStep("not-interested")}
+                  className="mt-4 text-sm text-muted-foreground hover:text-foreground"
+                >
+                  No estoy interesado de momento
+                </Button>
               </motion.div>
             )}
 
