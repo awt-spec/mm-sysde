@@ -23,7 +23,7 @@ interface Slot {
 }
 
 const Index = () => {
-  const [step, setStep] = useState<"dates" | "times" | "confirm" | "thanks">("dates");
+  const [step, setStep] = useState<"dates" | "times" | "confirm" | "thanks" | "not-interested">("dates");
   const [selectedDates, setSelectedDates] = useState<Date[]>([]);
   const [slots, setSlots] = useState<Slot[]>([]);
   const [currentDateIndex, setCurrentDateIndex] = useState(0);
@@ -86,7 +86,7 @@ const Index = () => {
 
     try {
       const { error } = await supabase.functions.invoke("send-diagnostic", {
-        body: { company: "Cliente", product: "Filemaster", availability },
+        body: { company: "Multimoney", product: "agendar una sesión", availability },
       });
       if (error) throw error;
       setStep("thanks");
@@ -198,6 +198,14 @@ const Index = () => {
                     Selecciona al menos 2 fechas en el calendario
                   </p>
                 )}
+
+                <Button
+                  variant="ghost"
+                  onClick={() => setStep("not-interested")}
+                  className="mt-4 text-sm text-muted-foreground hover:text-foreground"
+                >
+                  No estoy interesado de momento
+                </Button>
               </motion.div>
             )}
 
@@ -383,6 +391,31 @@ const Index = () => {
                 <p className="text-muted-foreground text-sm max-w-lg leading-relaxed">
                   Revisa tu correo para la confirmación. ¡Nos vemos! 🚀
                 </p>
+              </motion.div>
+            )}
+
+            {/* STEP: Not interested */}
+            {step === "not-interested" && (
+              <motion.div
+                key="not-interested"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4 }}
+                className="flex flex-col items-center text-center"
+              >
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  ¡Entendido! 👋
+                </h2>
+                <p className="text-muted-foreground text-base md:text-lg max-w-lg mb-6 leading-relaxed">
+                  No hay problema, quedamos atentos para cuando lo necesites.
+                </p>
+                <Button
+                  variant="outline"
+                  onClick={() => setStep("dates")}
+                  className="rounded-xl"
+                >
+                  ← Volver
+                </Button>
               </motion.div>
             )}
 
