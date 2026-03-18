@@ -383,13 +383,13 @@ const Index = () => {
                 </motion.div>
 
                 <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
-                  ¡Listo! 🎉
+                  ¡Gracias! 🎉
                 </h2>
                 <p className="text-muted-foreground text-base md:text-lg max-w-lg mb-2 leading-relaxed">
-                  Recibimos tu disponibilidad. Te confirmaremos la fecha y hora de la sesión muy pronto.
+                  Recibimos tu disponibilidad. Un ejecutivo de Sysde se pondrá en contacto contigo para confirmar la fecha y hora de la sesión.
                 </p>
                 <p className="text-muted-foreground text-sm max-w-lg leading-relaxed">
-                  Revisa tu correo para la confirmación. ¡Nos vemos! 🚀
+                  ¡Gracias por tu tiempo, nos vemos pronto! 🚀
                 </p>
               </motion.div>
             )}
@@ -404,17 +404,20 @@ const Index = () => {
                 className="flex flex-col items-center text-center"
               >
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                  ¡Entendido! 👋
+                  ¡Sin problema! 😊
                 </h2>
-                <p className="text-muted-foreground text-base md:text-lg max-w-lg mb-6 leading-relaxed">
-                  No hay problema, quedamos atentos para cuando lo necesites.
+                <p className="text-muted-foreground text-base md:text-lg max-w-lg mb-2 leading-relaxed">
+                  Entendemos perfectamente. Cuando estés listo, aquí estaremos para ti.
+                </p>
+                <p className="text-muted-foreground text-sm max-w-lg mb-6 leading-relaxed">
+                  En Sysde trabajamos para hacer tu día a día más fácil. No dudes en contactarnos cuando lo necesites. 💪
                 </p>
                 <Button
                   variant="outline"
                   onClick={() => setStep("dates")}
                   className="rounded-xl"
                 >
-                  ← Volver
+                  Cambié de opinión, quiero agendar
                 </Button>
               </motion.div>
             )}
