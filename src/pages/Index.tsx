@@ -404,20 +404,20 @@ const Index = () => {
                 className="flex flex-col items-center text-center"
               >
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                  ¡Sin problema! 😊
+                  Lo entendemos perfectamente 👋
                 </h2>
                 <p className="text-muted-foreground text-base md:text-lg max-w-lg mb-2 leading-relaxed">
-                  Entendemos perfectamente. Cuando estés listo, aquí estaremos para ti.
+                  Respetamos su decisión. En Sysde estamos comprometidos con impulsar la eficiencia operativa de Multimoney.
                 </p>
-                <p className="text-muted-foreground text-sm max-w-lg mb-6 leading-relaxed">
-                  En Sysde trabajamos para hacer tu día a día más fácil. No dudes en contactarnos cuando lo necesites. 💪
+                <p className="text-muted-foreground text-sm max-w-lg mb-8 leading-relaxed">
+                  Cuando lo consideren oportuno, será un gusto coordinar una sesión. Quedamos a la orden. 🙌
                 </p>
                 <Button
-                  variant="outline"
+                  size="lg"
                   onClick={() => setStep("dates")}
-                  className="rounded-xl"
+                  className="px-8 py-5 text-base font-semibold rounded-xl shadow-glow"
                 >
-                  Cambié de opinión, quiero agendar
+                  🚀 ¡Sí quiero agendar!
                 </Button>
               </motion.div>
             )}
