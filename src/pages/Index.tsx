@@ -23,7 +23,7 @@ interface Slot {
 }
 
 const Index = () => {
-  const [step, setStep] = useState<"dates" | "times" | "confirm" | "thanks">("dates");
+  const [step, setStep] = useState<"dates" | "times" | "confirm" | "thanks" | "not-interested">("dates");
   const [selectedDates, setSelectedDates] = useState<Date[]>([]);
   const [slots, setSlots] = useState<Slot[]>([]);
   const [currentDateIndex, setCurrentDateIndex] = useState(0);
