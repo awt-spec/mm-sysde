@@ -383,13 +383,13 @@ const Index = () => {
                 </motion.div>
 
                 <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
-                  ¡Gracias! 🎉
+                  ¡Excelente! ✅
                 </h2>
                 <p className="text-muted-foreground text-base md:text-lg max-w-lg mb-2 leading-relaxed">
-                  Recibimos tu disponibilidad. Un ejecutivo de Sysde se pondrá en contacto contigo para confirmar la fecha y hora de la sesión.
+                  Hemos recibido su disponibilidad. Un ejecutivo de Sysde se comunicará con Multimoney para coordinar y confirmar la sesión.
                 </p>
                 <p className="text-muted-foreground text-sm max-w-lg leading-relaxed">
-                  ¡Gracias por tu tiempo, nos vemos pronto! 🚀
+                  Agradecemos su tiempo y colaboración. Quedamos a su disposición. 🤝
                 </p>
               </motion.div>
             )}
