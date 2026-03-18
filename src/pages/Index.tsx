@@ -383,13 +383,13 @@ const Index = () => {
                 </motion.div>
 
                 <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
-                  ¡Gracias! 🎉
+                  ¡Excelente! ✅
                 </h2>
                 <p className="text-muted-foreground text-base md:text-lg max-w-lg mb-2 leading-relaxed">
-                  Recibimos tu disponibilidad. Un ejecutivo de Sysde se pondrá en contacto contigo para confirmar la fecha y hora de la sesión.
+                  Hemos recibido su disponibilidad. Un ejecutivo de Sysde se comunicará con Multimoney para coordinar y confirmar la sesión.
                 </p>
                 <p className="text-muted-foreground text-sm max-w-lg leading-relaxed">
-                  ¡Gracias por tu tiempo, nos vemos pronto! 🚀
+                  Agradecemos su tiempo y colaboración. Quedamos a su disposición. 🤝
                 </p>
               </motion.div>
             )}
@@ -404,20 +404,20 @@ const Index = () => {
                 className="flex flex-col items-center text-center"
               >
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                  ¡Sin problema! 😊
+                  Lo entendemos perfectamente 👋
                 </h2>
                 <p className="text-muted-foreground text-base md:text-lg max-w-lg mb-2 leading-relaxed">
-                  Entendemos perfectamente. Cuando estés listo, aquí estaremos para ti.
+                  Respetamos su decisión. En Sysde estamos comprometidos con impulsar la eficiencia operativa de Multimoney.
                 </p>
-                <p className="text-muted-foreground text-sm max-w-lg mb-6 leading-relaxed">
-                  En Sysde trabajamos para hacer tu día a día más fácil. No dudes en contactarnos cuando lo necesites. 💪
+                <p className="text-muted-foreground text-sm max-w-lg mb-8 leading-relaxed">
+                  Cuando lo consideren oportuno, será un gusto coordinar una sesión. Quedamos a la orden. 🙌
                 </p>
                 <Button
-                  variant="outline"
+                  size="lg"
                   onClick={() => setStep("dates")}
-                  className="rounded-xl"
+                  className="px-8 py-5 text-base font-semibold rounded-xl shadow-glow"
                 >
-                  Cambié de opinión, quiero agendar
+                  🚀 ¡Sí quiero agendar!
                 </Button>
               </motion.div>
             )}
