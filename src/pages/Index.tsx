@@ -394,7 +394,30 @@ const Index = () => {
               </motion.div>
             )}
 
-          </AnimatePresence>
+            {/* STEP: Not interested */}
+            {step === "not-interested" && (
+              <motion.div
+                key="not-interested"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4 }}
+                className="flex flex-col items-center text-center"
+              >
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  ¡Entendido! 👋
+                </h2>
+                <p className="text-muted-foreground text-base md:text-lg max-w-lg mb-6 leading-relaxed">
+                  No hay problema, quedamos atentos para cuando lo necesites.
+                </p>
+                <Button
+                  variant="outline"
+                  onClick={() => setStep("dates")}
+                  className="rounded-xl"
+                >
+                  ← Volver
+                </Button>
+              </motion.div>
+            )}
         </div>
       </main>
 
